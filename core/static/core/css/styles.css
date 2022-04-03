@@ -89,3 +89,10 @@ footer {
 .redes-sociales .facebook {
     background: #3b5998;
 }
+
+.servicios .tarjeta{
+    background: chocolate;
+}
+.servicios .tarjeta .contenido{
+    background: darksalmon;
+}

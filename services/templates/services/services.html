@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% block title %}Servicios{% endblock %}
+{% block headers %}
+<h2>Servicios</h2>
+
+<p>Estos son algunos de nuestros servicios</p>
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    
+    
+    <div class="container">
+
+        <div class="row mt-3">
+            {% for service in services %}
+                <div class="col-6">
+                    <div class="card">
+                        <img src="{{service.image.url}}" alt="">
+                        <div class="card-body">
+                            <h2 class="card-title">{{service.title}}</h2>
+                            <p class="card-text">{{service.description}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+    
+    </div>
+
+
+{% endblock %}

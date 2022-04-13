@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'core',
     'services.apps.ServicesConfig',
     'social.apps.SocialConfig',
+    'reviews.apps.ReviewsConfig',
     
 ]
 

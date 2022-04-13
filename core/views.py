@@ -10,6 +10,5 @@ def home(request):
 
 
     
-def reviews(request):
-    return render(request, 'core/reviews.html')
+
     

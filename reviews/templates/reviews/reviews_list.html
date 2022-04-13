@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% block title %}Reseñas{% endblock %}
+
+
+{% load static %}
+{% block content %}
+
+{% include 'reviews/includes/reviews_menu.html' %}
+<header class="container-fluid header">
+<section class="testimonios">
+    <div class="testimonios_header">
+        <span>Comentarios</span>
+        <h1>Clientes dicen: </h1>
+    </div>
+</section>
+
+    <div class="global">
+        {% for elemento in reviews_list %}
+            <div class="card">
+                <div class="testimonios1">
+                    <p class="name">{{ elemento.name }}</p>
+                    <p class="email">{{ elemento.email }}</p>
+                    <p class="message">{{ elemento.message }}</p>
+                </div>
+                <div class="reseñas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</header>
+{% endblock %}
